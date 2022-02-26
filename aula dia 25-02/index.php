@@ -11,7 +11,7 @@
     <title>Hello, world!</title>
   </head>
   <body class="container mt-5 p-4 shadow p-3 mb-5 rounded-3">
-    <h1>Exemplos de envio de formularios</h1>
+    <h1>Exemplos de envio de formulários</h1>
 
     <form method="post" action="resposta.php">
         <div class="row">
