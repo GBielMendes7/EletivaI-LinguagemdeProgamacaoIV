@@ -21,20 +21,21 @@
   <div class="container mt-5 p-4 border border-dark rounded-3">
     <h2 class="text-center">Troco</h2>
     <div class="row mt-2 p-2 justify-content-evenly">
-    <div class="col text-center fs-2">
-        <?php
-          if($totalmenos != 0){
-            echo "$totalmenos";
-          } else{
-            echo "não tem troco";
-          }
-        ?>
-      
-    </div>
+      <div class="col text-center fs-2">
+          <?php
+            if($totalmenos != 0){
+              echo "$totalmenos";
+            } else{
+              echo "não tem troco";
+            }
+          ?>
+        
+      </div>
+    </div>  
 
   </div>
 
-  <div class="container mt-5 p-4 border border-dark rounded-3">
+  <div class="container mt-5 p-4 text-center">
     <h2>Volte sempre!</h2>
   </div>
     
