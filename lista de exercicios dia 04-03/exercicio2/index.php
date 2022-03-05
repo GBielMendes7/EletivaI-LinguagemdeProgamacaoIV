@@ -10,7 +10,7 @@
 
     <title>exercicio 2</title>
   </head>
-  <body class="container mt-5 p-4 border border-dark rounded-3">
+  <body class="container mt-5 p-4 border border-white rounded-3 text-white bg-dark">
     <h1 class="text-center">LOJA</h1>
 
     <form method="post" action="resposta.php">

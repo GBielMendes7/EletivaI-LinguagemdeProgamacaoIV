@@ -18,7 +18,7 @@
         $total = $valor2 * $valor1;
     ?>
 
-    <div class="container mt-5 p-4 border border-dark rounded-3">
+    <div class="container mt-5 p-4 border border-white rounded-3 text-white bg-dark">
       <h2 class="text-center">Total</h2>
       <div class="row mt-2 p-2 justify-content-evenly">
         <div class="col text-center fs-2">
