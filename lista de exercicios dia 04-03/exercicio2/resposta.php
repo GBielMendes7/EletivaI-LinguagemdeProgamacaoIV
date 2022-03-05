@@ -21,11 +21,12 @@
     <div class="container mt-5 p-4 border border-dark rounded-3">
       <h2 class="text-center">Total</h2>
       <div class="row mt-2 p-2 justify-content-evenly">
-      <div class="col text-center fs-2">
-          <?php
-            echo "R$ $total";
-          ?>
-      </div>
+        <div class="col text-center fs-2">
+            <?php
+              echo "R$ $total";
+            ?>
+        </div>
+      </div>  
 
     </div>
     
