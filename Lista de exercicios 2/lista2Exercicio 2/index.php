@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -10,16 +10,27 @@
 
     <title>Exercicio 2</title>
   </head>
-  <body>
+  <body class="p-3 bg-primary">
+    <div class="container rounded-3 p-3 shadow bg-light">
+      <h3>Maior valor</h3>
       <form action="resposta.php" method="post">
-       
-        <label for="num">Digite um numero</label>      
-        <input type="number" id="num" name="num">
+        <div class="row p-3">
+          <div class="col mb-3">
+            <label for="num" class="form-label">Digite um numero</label>      
+            <input type="number"  class="form-control" id="num" name="num">
+          </div> 
+        </div>   
 
-
-        <button type="submit">enviar</button>
+        <div class="row">
+          <div class="col mb-3">
+            <button type="submit" class="btn btn-primary">enviar</button>
+          </div>   
+        </div>  
 
       </form>
-    
+
+
+    </div>
+     
   </body>
 </html>

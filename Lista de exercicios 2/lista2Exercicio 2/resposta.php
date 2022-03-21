@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -10,30 +10,50 @@
 
     <title>Exercício 2 - Resposta</title>
   </head>
-  <body>
-      <?php
+  <body class="p-3 bg-primary">
+    <?php
         $num = $_POST["num"];
-        $numteste = 1;
 
         for ($i=1; $i <= 20; $i++){
-          if($numteste <= 10){
-            $vetor[$i] = "$numteste";
+            $vetor[$i] = rand(1,10);
           }
-          else{
-            $numteste = 0;
-          }
-          $numteste++;
-        
-        }
+    ?>
+    <div class="container rounded-3 p-3">
+      <div class="row rounded-3 p-3 shadow mb-5 bg-light">
+          <div class="col">
+            <?php
+              foreach($vetor as $chave => $i){
+                if($num == $i){
+                  echo "O maior numero é $i e a chave é $chave";
+                  echo "<br>";
+                }
+              }
+                  
+            ?>
+          </div>
+        </div>
 
-        foreach($vetor as $chave => $i){
-            if($num == $i){
-                echo "numero é $i e a chave é $chave";
-            }
-        }
+        <div class="row rounded-3 p-3 shadow bg-light">
+          <h4>Vetor:</h4>
+          <div class="col">
+            <?php
+              foreach($vetor as $chave => $i){
+                if($num == $i){
+                  echo "<b>Posição do vetor: $chave e seu valor é $i</b>";
+                  echo "<br>";
+                }
+                else{
+                  echo "Posição do vetor: $chave e seu valor é $i";
+                  echo "<br>";
+                }
+              }
+            ?>
+          </div>
+        </div>
+
+    </div>
     
       
-      ?>
     
   </body>
 </html>
