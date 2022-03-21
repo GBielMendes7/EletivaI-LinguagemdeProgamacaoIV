@@ -10,13 +10,12 @@
 
     <title>Exercicio 3 - Resposta</title>
   </head>
-  <body>
+  <body class="p-3 bg-danger bg-gradient">
+    <div class="container rounded-3 p-3 shadow bg-dark text-light">
       <?php
-
         for ($i=1; $i <= 10; $i++){
           $vetor[$i] = $_POST["num$i"];
         }
-
         for($i=1; $i <= 10; $i++){
           for($j = $i+1; $j <= 10; $j++){
             if ($vetor[$i] == $vetor[$j]){
@@ -25,13 +24,22 @@
             }
           }
         }
-
-
-        foreach($vetor as $chave => $num){
-          echo "Posição do vetor: $chave e seu valor é $num";
-        }
-      
       ?>
+
+      <div class="row">
+        <h4>Vetor:</h4>
+        <div class="col">
+          <?php
+            foreach($vetor as $chave => $num){
+              echo "Posição do vetor: $chave e seu valor é $num";
+              echo "<br>";
+            }
+          ?>
+        </div>
+      </div>
+
+    </div>
+    
     
   </body>
 </html>
