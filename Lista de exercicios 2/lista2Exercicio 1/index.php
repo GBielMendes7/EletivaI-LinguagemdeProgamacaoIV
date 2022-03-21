@@ -10,21 +10,33 @@
 
     <title>Exercicio 1</title>
   </head>
-  <body>
-      <form action="resposta.php" method="post">
+  <body class="container rounded-3 p-3 border border-dark shadow">
+    <h2>Array de 10 números</h2>
+    <div class="row p-3">
+      <div class="col mb-3">
+        <form action="resposta.php" method="post">
         <?php
             for ($i=1; $i <= 10; $i++){
         ?>
-        <label for="num<?= $i ?>">Digite um valor <?= $i ?></label>
-                
-        <input type="number" id="num<?= $i ?>" name="num<?= $i ?>">
+        <label for="num<?= $i ?>" class="form-label">Digite um valor <?= $i ?></label>
+                  
+        <input type="number" class="form-control" id="num<?= $i ?>" name="num<?= $i ?>">
         <?php
             }
         ?>
 
-        <button type="submit">enviar</button>
+      </div>
 
-      </form>
+    </div>
+    <div class="row">
+      <div class="col mb-3">
+        <button type="submit" class="btn btn-danger">ENVIAR</button>
+     
+      </div>
+    </div>
+    
+
+    </form>
     
   </body>
 </html>

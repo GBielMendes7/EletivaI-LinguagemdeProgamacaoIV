@@ -10,8 +10,9 @@
 
     <title>Exercicio 1 - Resposta</title>
   </head>
-  <body>
-      <?php
+  <body class="container mb-5 p-3">
+    <h2 class="mb-3">Array de 10 números</h2>
+    <?php
 
         for ($i=1; $i <= 10; $i++){
             $vetor[$i] = $_POST["num$i"];
@@ -19,18 +20,34 @@
 
         $posicao = 0;
         $maior = 0;
+    ?>
 
-        foreach($vetor as $chave => $num){
-            echo "Posição do vetor: $chave e seu valor é $num";
-            echo "<h1>BR</h1>";
+    <div class="row rounded-3 p-3 border border-dark shadow mb-5">
+      <div class="col">
+        <?php
+          foreach($vetor as $chave => $num){
             if ($num > $maior){
                 $maior = $num;
                 $posicao = $chave;
             }
-        }
-        echo "O maior valor é $maior e está na posição $posicao";    
-      
-      ?>
+          }
+          echo "<h4>O maior valor é $maior e está na posição $posicao</h4>";    
+        ?>
+      </div>
+    </div>
+
+    <div class="row rounded-3 p-3 border border-dark shadow">
+      <h4>Vetor:</h4>
+      <div class="col">
+        <?php
+          foreach($vetor as $chave => $num){
+            echo "Posição do vetor: $chave e seu valor é $num";
+            echo "<br>";
+          }
+        ?>
+      </div>
+    </div>
+
     
   </body>
 </html>
