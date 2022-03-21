@@ -10,21 +10,45 @@
 
     <title>Exercicio 4</title>
   </head>
-  <body>
-      <form action="resposta.php" method="post">
-        <?php
-            for ($i=1; $i <= 10; $i++){
-        ?>
-        <label for="num<?= $i ?>">Digite um valor <?= $i ?></label>
-                
-        <input type="number" id="num<?= $i ?>" name="num<?= $i ?>">
-        <?php
-            }
-        ?>
+  <body class="bg-success bg-gradient">
 
-        <button type="submit">enviar</button>
+    <div class="container mt-5 p-4 rounded-3 bg-white shadow w-50">
+      <h1 class="text-center">Notas</h1>
+
+      <form  class="mt-4" method="post" action="resposta.php">
+        <select class="mb-3 form-select bg-light border border-light">
+          <option selected>Selecione a materia</option>
+          <option value="1">Português</option>
+          <option value="2">Matemática</option>
+          <option value="3">Historia</option>
+          <option value="4">Geografia</option>
+        </select>
+
+        <div class="row p-3">
+          <div class="col mb-3">
+            <?php
+                for ($i=1; $i <= 10; $i++){
+            ?>
+            <label for="num<?= $i ?>" class="form-label">Digite a nota <?= $i ?></label>
+                      
+            <input type="number" class="form-control bg-light border border-light" id="num<?= $i ?>" name="num<?= $i ?>">
+            <?php
+                }
+            ?>
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col mb-3">
+            <button type="submit" class="btn btn-success">ENVIAR</button>
+        
+          </div>
+        </div>
 
       </form>
+
+    </div>
     
   </body>
 </html>
