@@ -15,16 +15,21 @@
     <?php
       function ondenar($vetor){
           sort($vetor);
+          foreach($vetor as $chave => $i){
+            echo "Aluno:",$chave,"  Nome:",$i;
+            echo "<br>";
+           
+          }
         }
 
       for ($i=1; $i <= 10; $i++){
-        $vetor[$i] = $_POST["aluno"];
+        $vetor[$i] = $_POST["aluno$i"];
       }
     
     ?>
+    
     <div class="container mt-3 p-4 rounded-3 bg-white shadow w-50 text-center">
       <?php
-        echo $vetor;
         ondenar($vetor);
       ?>
 

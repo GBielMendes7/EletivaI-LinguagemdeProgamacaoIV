@@ -29,9 +29,9 @@
             <?php
                 for ($i=1; $i <= 10; $i++){
             ?>
-            <label for="aluno" class="form-label">Digite o nome do aluno:</label>
+            <label for="aluno<?= $i ?>" class="form-label">Digite o nome do aluno<?= $i ?>:</label>
                       
-            <input type="text" class="form-control bg-light border border-light" id="aluno" name="aluno">
+            <input type="text" class="form-control bg-light border border-light" id="aluno<?= $i ?>" name="aluno<?= $i ?>">
             <?php
                 }
             ?>
