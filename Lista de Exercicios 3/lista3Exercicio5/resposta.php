@@ -10,7 +10,7 @@
 
     <title>Exercicio 5</title>
   </head>
-  <body class="p-3 bg-warning">
+  <body class="p-3 bg-light">
   <?php
         function imc($peso, $altura){
             $imc = $peso / $altura**2;
