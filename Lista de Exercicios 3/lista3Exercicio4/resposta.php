@@ -10,33 +10,47 @@
 
     <title>Exercicio 4</title>
   </head>
-  <body>
-      <?php
+  <body class="p-3 bg-danger">
+    <?php
         function divisor($numero){
-            $soma = 0;
-            for ($i=1; $i <= ($numero/2); $i++){
-                if($numero % $i == 0){
-                  echo $i,"+";
+          $soma = 0;
+          for ($i=1; $i <= ($numero/2); $i++){
+            if($numero % $i == 0){
+                echo $i,"+";
                   $soma += $i;
                 }
             }
-            echo "=",$soma;
-        }
-
-        $num1 = $_POST["num"];
-        $num2 = $_POST["num2"];
-        $num3 = $_POST["num3"];
-        $num4 = $_POST["num4"];
-        $num5 = $_POST["num5"];
-        divisor($num1);
-        divisor($num2);
-        divisor($num3);
-        divisor($num4);
-        divisor($num5);
-
-      
-      
+          echo "=",$soma;
+          }
       ?>
+    <div class="container rounded-3 p-3 shadow bg-light">
+      <h2 class="text-center">Resultados</h2>
+      <div class="row">
+        <div class="col text-center">
+        <?php
+          $num1 = $_POST["num"];
+          $num2 = $_POST["num2"];
+          $num3 = $_POST["num3"];
+          $num4 = $_POST["num4"];
+          $num5 = $_POST["num5"];
+          divisor($num1);
+          echo "<br>";
+          divisor($num2);
+          echo "<br>";
+          divisor($num3);
+          echo "<br>";
+          divisor($num4);
+          echo "<br>";
+          divisor($num5);
+        
+        ?>
+
+        </div>
+
+      </div>
+
+    </div>
+      
    
   </body>
 </html>

@@ -10,43 +10,43 @@
 
     <title>Exercicio 4</title>
   </head>
-  <body class="p-3 bg-primary">
+  <body class="p-3 bg-danger">
     <div class="container rounded-3 p-3 shadow bg-light">
-      <h3>Maior número e menor</h3>
+      <h3 class="text-center">Maior número e menor</h3>
       <form action="resposta.php" method="post">
         <div class="row p-3">
-          <div class="col mb-3">
+          <div class="col mb-2">
             <label for="num" class="form-label">Digite um numero</label>      
             <input type="number"  class="form-control" id="num" name="num">
           </div>
         </div>
         <div class="row p-3">
-          <div class="col mb-3">
+          <div class="col mb-2">
             <label for="num2" class="form-label">Digite um numero</label>      
             <input type="number"  class="form-control" id="num2" name="num2">
           </div>
         </div>
         <div class="row p-3">
-          <div class="col mb-3">
+          <div class="col mb-2">
             <label for="num3" class="form-label">Digite um numero</label>      
             <input type="number"  class="form-control" id="num3" name="num3">
           </div>
         </div>
         <div class="row p-3">
-          <div class="col mb-3">
+          <div class="col mb-2">
             <label for="num4" class="form-label">Digite um numero</label>      
             <input type="number"  class="form-control" id="num4" name="num4">
           </div>
         </div>
         <div class="row p-3">
-          <div class="col mb-3">
+          <div class="col mb-2">
             <label for="num5" class="form-label">Digite um numero</label>      
             <input type="number"  class="form-control" id="num5" name="num5">
           </div>
         </div>               
 
         <div class="row">
-          <div class="col mb-3">
+          <div class="col mb-2">
             <button type="submit" class="btn btn-primary">enviar</button>
           </div>   
         </div>  
