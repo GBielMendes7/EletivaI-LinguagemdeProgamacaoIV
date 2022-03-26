@@ -26,22 +26,44 @@
     <div class="container rounded-3 p-3 shadow bg-light">
       <h2 class="text-center">Resultados</h2>
       <div class="row">
-        <div class="col text-center">
+        <div class="col text-center fs-4">
         <?php
           $num1 = $_POST["num"];
           $num2 = $_POST["num2"];
           $num3 = $_POST["num3"];
           $num4 = $_POST["num4"];
           $num5 = $_POST["num5"];
-          divisor($num1);
+          if ($num1 > 0){
+            divisor($num1);
+          }else{
+            echo "Numero negativo!";
+          }
           echo "<br>";
-          divisor($num2);
+          if ($num2 > 0){
+            divisor($num2);
+          }else{
+            echo "Numero negativo!";
+          }
           echo "<br>";
-          divisor($num3);
+          if ($num3 > 0){
+            divisor($num3);
+          }else{
+            echo "Numero negativo!";
+          }
           echo "<br>";
-          divisor($num4);
+          if ($num4 > 0){
+            divisor($num4);
+          }else{
+            echo "Numero negativo!";
+          }
           echo "<br>";
-          divisor($num5);
+          if ($num5 > 0){
+            divisor($num5);
+          }else{
+            echo "Numero negativo!";
+          }
+          echo "<br>";
+         
         
         ?>
 

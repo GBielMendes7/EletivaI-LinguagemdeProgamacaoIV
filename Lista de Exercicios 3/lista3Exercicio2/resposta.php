@@ -28,10 +28,16 @@
     
     ?>
     
-    <div class="container mt-3 p-4 rounded-3 bg-white shadow w-50 text-center">
-      <?php
-        ondenar($vetor);
-      ?>
+    <div class="container mt-3 p-4 rounded-3 bg-white shadow w-50 ">
+      <div class="row">
+        <div class="col text-center fs-3">
+          <?php
+            ondenar($vetor);
+          ?>
+
+        </div>
+      </div>
+      
 
     </div>
 

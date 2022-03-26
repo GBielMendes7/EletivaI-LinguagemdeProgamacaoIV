@@ -10,28 +10,39 @@
 
     <title>Exercicio 1</title>
   </head>
-  <body>
+  <body class="bg-dark bg-gradient">
+    <h2 class="text-center text-light mt-4">Data</h2>
     <?php
-        function verificarData($dia, $mes, $ano){
-            echo $dia,"/",$mes,"/",$ano;
-            if(checkdate($dia, $mes, $ano)){
-                echo "Válido";
-                echo date("w");
-            }
-            else{
-                echo "Invalido";
-            }
+      function verificarData($dia, $mes, $ano){
+        echo $dia,"/",$mes,"/",$ano;
+        echo "<br>";
+        if(checkdate($dia, $mes, $ano)){
+          echo "Válido";
         }
+        else{
+          echo "Invalido";
+        }
+      }
 
         $diaInformado = $_POST["dia"];
         $mesInformado = $_POST["mes"];
         $anoInformado = $_POST["ano"];
-
-        verificarData($diaInformado, $mesInformado, $anoInformado);
-
-    
-    
     ?>
+    <div class="container mt-5 p-4 rounded-3 bg-white shadow w-50">
+      <div class="row">
+        <div class="col fs-3 text-center">
+          <?php
+            verificarData($diaInformado, $mesInformado, $anoInformado);
+            echo "<br>";
+            echo "Horas:",date("H:i:s");
+
+          ?>
+
+        </div>
+      </div>
+
+    </div>
+    
     
     
   </body>

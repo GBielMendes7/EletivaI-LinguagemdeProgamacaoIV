@@ -10,24 +10,38 @@
 
     <title>Exercicio 3</title>
   </head>
-  <body>
-      <?php
-        function maiorMenor($numero1, $numero2){
-            if ($numero1 > $numero2){
-                echo "O maior numero digitado foi o", $numero1;
-            }elseif($numero1 == $numero2){
-                echo "os números digitados são iguais";
+  <body class="p-3 bg-success bg-gradient">
+    <div class="container rounded-3 p-3 shadow bg-light">
+      <h2 class="text-center">O maior numero digitado foi:</h2>
+      <div class="row">
+        <div class="col text-center fs-3">
+          <?php
+            function maiorMenor($numero1, $numero2){
+              if ($numero1 > $numero2){
+                  echo $numero1;
+              }elseif($numero1 == $numero2){
+                  echo "os números digitados são iguais";
+              }
+              else{
+                  echo $numero2;
+              }
             }
-            else{
-                echo "O maior numero digitado foi o", $numero2;
-            }
-        }
-        $num1 = $_POST["num"];
-        $num2 = $_POST["num2"];
+            $num1 = $_POST["num"];
+            $num2 = $_POST["num2"];
 
-        maiorMenor($num1, $num2);
+            maiorMenor($num1, $num2);
+        
+          ?>
+
+        </div>
+      </div>
+
+    </div>
+
+
+
+
       
-      ?>
     
      
   </body>

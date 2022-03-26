@@ -10,25 +10,25 @@
 
     <title>Exercicio 5</title>
   </head>
-  <body class="p-3 bg-light text-light">
+  <body class="p-3 bg-primary text-light">
     <div class="container rounded-3 p-3 shadow bg-dark">
       <h3 class="text-center">IMC Calculadora</h3>
       <form action="resposta.php" method="post">
         <div class="row p-3">
           <div class="col mb-3">
             <label for="peso" class="form-label">Digite seu peso:</label>      
-            <input type="number"  class="form-control bg-dark text-light" id="peso" name="peso">
+            <input type="number" class="form-control bg-dark text-light" id="peso" name="peso">
           </div>
           <div class="col mb-3">
             <label for="altura" class="form-label">Digite a sua altura:</label>      
-            <input type="number"  class="form-control bg-dark text-light" id="altura" name="altura">
+            <input type="number" step="0.01" class="form-control bg-dark text-light" id="altura" name="altura">
           </div>
         </div>
         
 
         <div class="row">
           <div class="col mb-3">
-            <button type="submit" class="btn btn-primary">enviar</button>
+            <button type="submit" class="btn btn-primary p-2">Enviar</button>
           </div>   
         </div>  
 

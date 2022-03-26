@@ -10,7 +10,7 @@
 
     <title>Exercicio 3</title>
   </head>
-  <body class="p-3 bg-primary">
+  <body class="p-3 bg-success bg-gradient">
     <div class="container rounded-3 p-3 shadow bg-light">
       <h3>Maior número e menor</h3>
       <form action="resposta.php" method="post">
