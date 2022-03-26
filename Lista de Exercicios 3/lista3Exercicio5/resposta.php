@@ -10,18 +10,14 @@
 
     <title>Exercicio 5</title>
   </head>
-  <body>
-      <?php
+  <body class="p-3 bg-warning">
+  <?php
         function imc($peso, $altura){
             $imc = $peso / $altura**2;
-            if($imc < 16){
-                echo "Magreza grave";
-            }elseif($imc < 17){
-                echo "Magreza moderada";
-            }elseif($imc < 18.5){
-                echo "Magreza leve";
+            if($imc < 18.5){
+                echo "Magreza";
             }elseif($imc < 25){
-                echo "Saudável";
+                echo "Normal";
             }elseif($imc < 30){
                 echo "Sobrepeso";
             }elseif($imc < 35){
@@ -32,14 +28,23 @@
                 echo"Obesidade Grau III (mórbida)";
             }
         }
-
-        $Peso = $_POST["peso"];
-        $Altura = $_POST["altura"];
-
-        imc($Peso,$Altura);
-
       
       ?>
+      <h1 class="text-center">Seu IHC</h1>
+      <div class="container rounded-3 p-3 shadow bg-dark fs-2 text-light">
+            <div class="row">
+                <div class="col text-center">
+                    <?php
+                        $Peso = $_POST["peso"];
+                        $Altura = $_POST["altura"];
+            
+                        imc($Peso,$Altura);
+                    ?>
+                </div>
+            </div>
+          
+      </div>
+      
       
     
 

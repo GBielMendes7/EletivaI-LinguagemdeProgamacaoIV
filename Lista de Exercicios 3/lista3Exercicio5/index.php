@@ -10,18 +10,18 @@
 
     <title>Exercicio 5</title>
   </head>
-  <body class="p-3 bg-primary">
-    <div class="container rounded-3 p-3 shadow bg-light">
-      <h3>Maior número e menor</h3>
+  <body class="p-3 bg-light text-light">
+    <div class="container rounded-3 p-3 shadow bg-dark">
+      <h3 class="text-center">IMC Calculadora</h3>
       <form action="resposta.php" method="post">
         <div class="row p-3">
           <div class="col mb-3">
             <label for="peso" class="form-label">Digite seu peso:</label>      
-            <input type="number"  class="form-control" id="peso" name="peso">
+            <input type="number"  class="form-control bg-dark text-light" id="peso" name="peso">
           </div>
           <div class="col mb-3">
             <label for="altura" class="form-label">Digite a sua altura:</label>      
-            <input type="number"  class="form-control" id="altura" name="altura">
+            <input type="number"  class="form-control bg-dark text-light" id="altura" name="altura">
           </div>
         </div>
         
@@ -33,9 +33,34 @@
         </div>  
 
       </form>
-
-
     </div>
+    <div class="container rounded-3 mt-3 p-3 shadow bg-dark text-center text-light">
+      <div class="row">
+        <div class="col bg-primary p-3 text-light border border-light rounded-3">IMC</div>
+        <div class="col bg-primary p-3 text-light border border-light rounded-3">CLASSIFICAÇÃO</div>
+      </div>
+      <div class="row">
+        <div class="col bg-primary p-3 text-light border border-light rounded-3">entre 18,6 e 24,9</div>
+        <div class="col p-3 border border-light rounded-3">Peso ideal(Parabéns)</div>
+      </div>
+      <div class="row">
+        <div class="col bg-primary p-3 text-light border border-light rounded-3">entre 25,0 e 29,9</div>
+        <div class="col p-3 border border-light rounded-3">Levemente acima do peso</div>
+      </div>
+      <div class="row">
+        <div class="col bg-primary p-3 text-light border border-light rounded-3">entre 30,0 e 34,9</div>
+        <div class="col p-3 border border-light rounded-3">Obesidade I</div>
+      </div>
+      <div class="row">
+        <div class="col bg-primary p-3 text-light border border-light rounded-3">entre 35,0 e 39,9</div>
+        <div class="col p-3 border border-light rounded-3">Obesidade II(severa)</div>
+      </div>
+      <div class="row">
+        <div class="col bg-primary p-3 text-light border border-light rounded-3">acima de 40</div>
+        <div class="col p-3 border border-light rounded-3">Obesidade III(mórbida)</div>
+      </div>
+    </div>
+
      
   </body>
 </html>
