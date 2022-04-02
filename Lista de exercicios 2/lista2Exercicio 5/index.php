@@ -10,7 +10,8 @@
 
     <title>Exercicio 5 - Resposta</title>
   </head>
-  <body>
+  <body class="mt-5 p-4 bg-danger bg-gradient">
+    <h2 class="text-light text-center">Resultado</h2>
       <?php
 
         $vetor = [ 9, 5, 7, 2 ];
@@ -26,12 +27,19 @@
             }
           }
         }
-
-        foreach($vetor as $chave => $i){
-          echo "Posição do vetor: $chave e seu valor é $i";
-        }
       
       ?>
+
+    <div class="container mt-3 p-4 rounded-3 bg-white shadow w-50 text-center">
+      <?php
+        foreach($vetor as $chave => $i){
+          echo "Posição do vetor: $chave e seu valor é $i";
+          echo "<br>";
+        }
+        
+      ?>
+
+    </div>
     
   </body>
 </html>
