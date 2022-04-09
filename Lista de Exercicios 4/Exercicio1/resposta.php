@@ -13,13 +13,43 @@
   <body class="bg-dark bg-gradient">
     <?php
         if($_POST){
-            $tempos = $_POST["tempo$i"];
+          for ($i=1; $i <= 10; $i++){
+            $tempos[$i] = $_POST["tempo$i"];
+          }
             session_start();
+            $volta = $_SESSION["volta"];
             $maior = 0;
-            $menos = 0;
-        }
+            $menor = 100;
+            for($i = 0 ;$i = $volta; $i++){
+              if($tempos[$i] > $maior){
+                $maior = $tempos[$i];
+                return $maior;
+              }
+
+              if($tempos[$i] < $menor){
+                $menor = $tempos[$i];
+                return $menor;
+              }
+                
+            }
+          }     
       
     ?>
+    <h2 class="text-center text-light mt-4">Resultado</h2>
+    <div class="container mt-5 p-4 rounded-3 bg-white shadow w-50">
+      <div class="row">
+        <div class="col">
+          <?php
+            echo $maior;
+            echo $menor;    
+          ?>
+    
+        </div>
+      </div>
+    </div>
+
+
+
     
     
     

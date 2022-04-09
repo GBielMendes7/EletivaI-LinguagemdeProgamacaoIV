@@ -11,7 +11,7 @@
     <title>Exercicio 1</title>
   </head>
   <body class="bg-dark bg-gradient">
-    <h2 class="text-center text-light mt-4">Data</h2>
+    <h2 class="text-center text-light mt-4">Cadastar voltas</h2>
     <div class="container mt-5 p-4 rounded-3 bg-white shadow w-50">
         <form action="voltas.php" method="POST">
             <div class="row">

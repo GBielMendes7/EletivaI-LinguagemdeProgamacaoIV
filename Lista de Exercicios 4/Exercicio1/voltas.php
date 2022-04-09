@@ -11,18 +11,20 @@
     <title>Exercicio 1</title>
   </head>
   <body class="bg-dark bg-gradient">
-
+    <h2 class="text-center text-light mt-4">Tempos</h2>
     <div class="container mt-5 p-4 rounded-3 bg-white shadow w-50">
         <form action="resposta.php" method="POST">
             <div class="row">
                 <div class="col">
                     <?php
+                        session_start();
                         $volta = $_POST['volta'];
+                        $_SESSION["volta"] = $volta;
                         for ($i=1; $i <= $volta; $i++){
                     
                     ?>
                     <label for="tempo<?= $i ?>" class="label-control">Informar o tempo da volta<?= $i ?>:</label>
-                    <input type="text" class="form-control" id="tempo<?= $i ?>" name="tempo<?= $i ?>">
+                    <input type="number" step="0.01" class="form-control" id="tempo<?= $i ?>" name="tempo<?= $i ?>">
                     <?php
                         }
                      ?>
@@ -30,7 +32,7 @@
             </div>
             <div class="row mt-3">
                 <div class="col">
-                    <button type="submit" class="btn btn-danger">Cadastrar tempos</button>
+                    <button type="submit" class="btn btn-danger">Resultados</button>
                 </div>
             </div>
 
