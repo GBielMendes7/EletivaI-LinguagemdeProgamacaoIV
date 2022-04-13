@@ -10,19 +10,19 @@
 
     <title>Exercicio 1</title>
   </head>
-  <body class="bg-dark bg-gradient">
-    <h2 class="text-center text-light mt-4">Cadastar voltas</h2>
+  <body class="bg-danger bg-gradient">
+    <h2 class="text-center text-light mt-4">Cadastrar voltas</h2>
     <div class="container mt-5 p-4 rounded-3 bg-white shadow w-50">
         <form action="voltas.php" method="POST">
             <div class="row">
                 <div class="col">
-                    <label for="volta" class="label-control">Números de voltas:</label>
-                    <input type="number" class="form-control" id="volta" name="volta">
+                    <label for="voltas" class="label-control">Números de voltas:</label>
+                    <input type="number" class="form-control" id="voltas" name="voltas">
                 </div>
     
             <div class="row mt-3">
                 <div class="col">
-                    <button type="submit" class="btn btn-danger">Cadastrar tempos</button>
+                    <button type="submit" class="btn btn-success">Cadastrar tempos</button>
                 </div>
             </div>
 

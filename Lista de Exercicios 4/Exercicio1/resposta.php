@@ -10,29 +10,29 @@
 
     <title>Exercicio 1</title>
   </head>
-  <body class="bg-dark bg-gradient">
+  <body class="bg-danger bg-gradient">
     <?php
+        $maior = 0;
+        $menor = 100;
         if($_POST){
-          for ($i=1; $i <= 10; $i++){
-            $tempos[$i] = $_POST["tempo$i"];
-          }
-            session_start();
-            $volta = $_SESSION["volta"];
-            $maior = 0;
-            $menor = 100;
-            for($i = 0 ;$i = $volta; $i++){
+          $tempos = $_POST["tempo"];
+          session_start();
+          $voltas = $_SESSION["voltas"];
+          if(($voltas >= 1) && ($tempos > "00:00")){
+            for($i = 0; $i < $voltas; $i++){
               if($tempos[$i] > $maior){
                 $maior = $tempos[$i];
-                return $maior;
               }
+              return $maior;
 
-              if($tempos[$i] < $menor){
-                $menor = $tempos[$i];
-                return $menor;
+              if($tempos[$i] < $menor[$i]){
+                $menor = $tempos;
               }
-                
+              return $menor;
+                  
             }
-          }     
+          }
+        }     
       
     ?>
     <h2 class="text-center text-light mt-4">Resultado</h2>
@@ -40,8 +40,10 @@
       <div class="row">
         <div class="col">
           <?php
-            echo $maior;
-            echo $menor;    
+            echo "A melhor volta foi: <br>";
+            echo "1º:",$maior,"<br>";
+            echo "A pior volta foi: <br>";
+            echo "2º",$menor,"<br>";    
           ?>
     
         </div>

@@ -8,19 +8,43 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>Exercicio 1</title>
+    <title>Exercicio 2</title>
   </head>
-  <body class="bg-dark bg-gradient">
+  <body class="bg-primary bg-gradient">
+    <h2 class="text-center text-light mt-4">Resultados</h2>
     <?php
         if($_POST){
-            $tempos = $_POST["tempo$i"];
-            session_start();
-            $maior = 0;
-            $menos = 0;
+          session_start();
+          $_SESSION["cheques"] = $cheques;
+          $_SESSION["soma"] = $total_soma;
+          $soma = 0;
+          for ($i=1; $i <= $cheques; $i++){
+            $vetor[$i] = $_POST["valor"];
+            $soma += $vetor[$i];
+          }
         }
+        echo $soma;  
+            
       
     ?>
-    
+
+
+    <div class="container mt-5 p-4 rounded-3 bg-white shadow w-50">
+      <div class="row">
+        <div class="col">
+          <?php
+              if($total_soma > $soma){
+                  echo "ok";
+                }else{
+                  echo "não";
+                }
+            
+                    
+          ?>
+                
+        </div>
+      </div>
+    </div>
     
     
   </body>

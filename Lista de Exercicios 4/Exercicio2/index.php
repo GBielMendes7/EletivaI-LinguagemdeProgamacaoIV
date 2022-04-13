@@ -8,10 +8,10 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>Exercicio 1</title>
+    <title>Exercicio 2</title>
   </head>
-  <body class="bg-dark bg-gradient">
-    <h2 class="text-center text-light mt-4">Data</h2>
+  <body class="bg-primary bg-gradient">
+    <h2 class="text-center text-light mt-4">Verificação de valores</h2>
     <div class="container mt-5 p-4 rounded-3 bg-white shadow w-50">
         <form action="cheques.php" method="POST">
             <div class="row">
