@@ -10,7 +10,7 @@
 
     <title>Exercicio 2</title>
   </head>
-  <body class="bg-primary bg-gradient">
+  <body class="bg-primary">
     <h2 class="text-center text-light mt-4">Verificação de valores</h2>
     <div class="container mt-5 p-4 rounded-3 bg-white shadow w-50">
         <form action="cheques.php" method="POST">
@@ -21,7 +21,7 @@
                 </div>
                 <div class="col">
                     <label for="soma" class="label-control">Somas dos cheques do lote:</label>
-                    <input type="number" class="form-control" id="soma" name="soma">
+                    <input type="number" class="form-control" id="soma" name="soma" placeholder="R$">
                 </div>
     
             <div class="row mt-3">

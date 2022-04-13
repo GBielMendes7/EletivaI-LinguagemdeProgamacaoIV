@@ -10,33 +10,31 @@
 
     <title>Exercicio 2</title>
   </head>
-  <body class="bg-primary bg-gradient">
+  <body class="bg-primary">
     <h2 class="text-center text-light mt-4">Resultados</h2>
     <?php
         if($_POST){
           session_start();
-          $_SESSION["cheques"] = $cheques;
-          $_SESSION["soma"] = $total_soma;
+          $cheques = $_SESSION["cheques"];
+          $total_soma = $_SESSION["soma"];
           $soma = 0;
           for ($i=1; $i <= $cheques; $i++){
             $vetor[$i] = $_POST["valor"];
             $soma += $vetor[$i];
           }
-        }
-        echo $soma;  
-            
+        }       
       
     ?>
 
 
     <div class="container mt-5 p-4 rounded-3 bg-white shadow w-50">
-      <div class="row">
+      <div class="row text-center fs-2">
         <div class="col">
           <?php
-              if($total_soma > $soma){
-                  echo "ok";
+              if($total_soma >= $soma){
+                  echo "Os cheques estão com o mesmo valor do lote.";
                 }else{
-                  echo "não";
+                  echo "Os cheques não estão com o mesmo valor do lote.";
                 }
             
                     
