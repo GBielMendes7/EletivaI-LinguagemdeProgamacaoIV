@@ -12,25 +12,26 @@
   </head>
   <body class="bg-danger bg-gradient">
     <?php
-        $maior = 0;
-        $menor = 100;
         if($_POST){
-          $tempos = $_POST["tempo"];
           session_start();
           $voltas = $_SESSION["voltas"];
-          if(($voltas >= 1) && ($tempos > "00:00")){
-            for($i = 0; $i < $voltas; $i++){
-              if($tempos[$i] > $maior){
-                $maior = $tempos[$i];
-              }
-              return $maior;
 
-              if($tempos[$i] < $menor[$i]){
-                $menor = $tempos;
-              }
-              return $menor;
-                  
+          for ($i=1; $i <= $voltas; $i++){
+            $tempos[$i] = $_POST["tempo".$i];
+            echo $tempos[$i];
+          }
+
+          $maior = 0;
+          $menor = 100;
+
+          for($i = 1; $i < $voltas; $i++){
+            if($tempos[$i] >= $maior){
+              $maior = $tempos[$i];
             }
+            if($tempos[$i] <= $menor[$i]){
+              $menor = $tempos;
+            }
+                  
           }
         }     
       
@@ -41,9 +42,9 @@
         <div class="col">
           <?php
             echo "A melhor volta foi: <br>";
-            echo "1º:",$maior,"<br>";
+            echo "1º:",$menor,"<br>";
             echo "A pior volta foi: <br>";
-            echo "2º",$menor,"<br>";    
+            echo "2º",$maior,"<br>";    
           ?>
     
         </div>

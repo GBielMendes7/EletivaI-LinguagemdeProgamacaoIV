@@ -23,8 +23,8 @@
                         for ($i=1; $i <= $voltas; $i++){
                     
                     ?>
-                    <label for="tempo" class="label-control">Informar o tempo da volta<?= $i ?>:</label>
-                    <input type="time" step="0.01" class="form-control" id="tempo" name="tempo">
+                    <label for="tempo<?= $i ?>" class="label-control">Informar o tempo da volta<?= $i ?>:</label>
+                    <input type="number" step="0.01" class="form-control" id="tempo<?= $i ?>" name="tempo<?= $i ?>">
                     <?php
                         }
                      ?>
