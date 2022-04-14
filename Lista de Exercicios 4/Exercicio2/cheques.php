@@ -28,7 +28,7 @@
                     
                     ?>
                     <label for="valor" class="label-control">Informar o valor do cheque <?= $i ?>º:</label>
-                    <input type="number" class="form-control" id="valor" name="valor" placeholder="R$">
+                    <input type="number" step="0.01" class="form-control" id="valor" name="valor" placeholder="R$">
                     <?php
                         }
                      ?>

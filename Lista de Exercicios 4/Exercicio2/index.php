@@ -21,7 +21,7 @@
                 </div>
                 <div class="col">
                     <label for="soma" class="label-control">Somas dos cheques do lote:</label>
-                    <input type="number" class="form-control" id="soma" name="soma" placeholder="R$">
+                    <input type="number" step="0.01" class="form-control" id="soma" name="soma" placeholder="R$">
                 </div>
     
             <div class="row mt-3">

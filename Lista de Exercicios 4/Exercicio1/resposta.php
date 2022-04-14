@@ -18,20 +18,18 @@
 
           for ($i=1; $i <= $voltas; $i++){
             $tempos[$i] = $_POST["tempo".$i];
-            echo $tempos[$i];
           }
 
           $maior = 0;
           $menor = 100;
 
-          for($i = 1; $i < $voltas; $i++){
+          for($i = 1; $i <= $voltas; $i++){
             if($tempos[$i] >= $maior){
               $maior = $tempos[$i];
             }
-            if($tempos[$i] <= $menor[$i]){
-              $menor = $tempos;
+            if($tempos[$i] <= $menor){
+              $menor = $tempos[$i];
             }
-                  
           }
         }     
       
@@ -39,14 +37,19 @@
     <h2 class="text-center text-light mt-4">Resultado</h2>
     <div class="container mt-5 p-4 rounded-3 bg-white shadow w-50">
       <div class="row">
-        <div class="col">
+        <div class="col fs-1">
+          <h3>Melhor volta</h3>
           <?php
-            echo "A melhor volta foi: <br>";
-            echo "1º:",$menor,"<br>";
-            echo "A pior volta foi: <br>";
-            echo "2º",$maior,"<br>";    
+            echo "1º:",$menor,"<br>";    
           ?>
     
+        </div>
+        <div class="col fs-2">
+          <h3>Pior volta</h3>
+          <?php
+            echo "2º:",$maior,"<br>";    
+          ?>
+
         </div>
       </div>
     </div>
