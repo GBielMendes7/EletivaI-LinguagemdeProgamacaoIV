@@ -9,7 +9,7 @@ class Matricial extends Impressora{
     {
         $this->setMarca($marca);
         $this->setModelo($modelo);
-        $this->setColorida($coloridas);
+        $this->setColoridas($coloridas);
         $this->setPeso($peso);
         $this->setCapacidadeToner($capacidadeToner);
         $this->setFrenteVerso($frenteVerso);
