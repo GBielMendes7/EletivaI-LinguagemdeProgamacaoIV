@@ -4,12 +4,13 @@
 class Ponto {
     private $x;
     private $y;
-    private static $contador;
+    private static $contador = 0;
 
     public function __construct($x, $y)
     {
         $this->setX($x);
         $this->setY($y);
+        self::setContador();
     }
 
     private static function setContador(){

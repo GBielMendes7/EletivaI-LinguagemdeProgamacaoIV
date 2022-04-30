@@ -14,16 +14,17 @@
         require_once("Ponto.php");
 
         $ponto = new Ponto(1,2);
-        $ponto2 = new Ponto(1,2);
-        $Ponto-> getContador();
+        echo "Quantidade de objetos criados:".Ponto::getContador();
+
+        $ponto2 = new Ponto(3,4);
+        echo "Quantidade de objetos criados:".$ponto2->formulaDistancia($ponto);
+
+        echo "Quantidade de objetos criados:".$ponto2->formulaDistanciaAlternativa(3,4);
+
+        echo "Quantidade de objetos criados:".$ponto2->formulaDistanciaAlternativa2(1,2,3,4);
 
 
-        var_dump($ponto);
 
-        echo "<br/>";
-
-        var_dump($porto);
-    
     ?>
     
   </body>
