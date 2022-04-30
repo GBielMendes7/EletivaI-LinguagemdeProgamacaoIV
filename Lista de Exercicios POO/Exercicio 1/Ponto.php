@@ -13,10 +13,10 @@ class Ponto {
         self::setContador();
     }
 
-    private static function setContador(){
+    public static function setContador(){
         self::$contador++;
     }
-    private static function getContador(){
+    public static function getContador(){
         return self::$contador;
     }
 
@@ -48,7 +48,7 @@ class Ponto {
 
     public function formulaDistanciaAlternativa2($X1,$Y1,$X2,$Y2){
         $valorX = pow(($X2 - $X1), 2);
-        $valorY = pow(($Y2 - $Y2), 2);
+        $valorY = pow(($Y2 - $Y1), 2);
         return sqrt($valorX + $valorY);
     }
 
