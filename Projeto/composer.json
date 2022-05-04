@@ -1,0 +1,16 @@
+{
+    "name": "eletiva-i-linguagemde-progamacao-iv/projeto",
+    "description": "estee e um exemplo",
+    "autoload": {
+      "psr-4": {
+        "EletivaILinguagemdeProgamacaoIv\\Projeto\\": "src/"
+      }
+    },
+    "authors": [
+        {
+            "name": "Gabriel Lucas",
+            "email": "lgabrielucas765@gmail.com"
+        }
+    ],
+    "require": {}
+}
