@@ -1,6 +1,6 @@
 <?php
 
-class Matricial extends Impressora{
+class Laser extends Impressora{
 
     private $capacidadeToner;
     private $frenteVerso;

@@ -9,7 +9,7 @@ class Funcionario{
     {
         $this->setNome($nome);
         $this->setCodigo($codigo);
-        self::setSalarioBase($salarioBase);
+        $this->setSalarioBase($salarioBase);
     }
 
     public function getNome(){
@@ -40,6 +40,11 @@ class Funcionario{
             $ir = ($this->salarioBase-2000.00)*0.12; 
         }
         return ($this->salarioBase - $inss - $ir);
+    }
+
+    public function Mostrar(){
+        echo "Nome: {$this->nome}, Codigo: {$this->codigo}, Salário:{$this->salarioBase}";
+
     }
 
 
