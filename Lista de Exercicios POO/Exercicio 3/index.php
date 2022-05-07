@@ -22,11 +22,11 @@
         echo"</br>";
 
         $teprepago = new PrePago(18,996454546,10,"VIVO");
-        echo " Custo de ligação Telefone Fixo:".$teprepago->calcularCusto(5);
+        echo " Custo de ligação pré pago:".$teprepago->calcularCusto(5);
         echo"</br>";
 
         $tepospago = new PosPago(18,996454546,10,"TIM");
-        echo " Custo de ligação Telefone Fixo:".$tepospago->calcularCusto(5);
+        echo " Custo de ligação pos pago:".$tepospago->calcularCusto(5);
         echo"</br>";
 
 

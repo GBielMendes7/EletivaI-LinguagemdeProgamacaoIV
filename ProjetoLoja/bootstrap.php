@@ -1,7 +1,5 @@
 <?php
 
-use Aluno\ProjetoLoja\Router;
-
 require_once __DIR__."/vendor/autoload.php";
 
    //Aqui é recuperado o que foi digitado pelo usuario e qual méthodo HTTP ele utilizou
@@ -18,6 +16,10 @@ require_once __DIR__."/vendor/autoload.php";
    $router->get("/ola-mundo", function(){
        return "Olá Mundo!";
    });
+
+   $router->get("/exemplo", "Aluno\ProjetoLoja\controller\ExercicioController::exibir");
+
+   $router->post("/exemplo-resultado","Aluno\ProjetoLoja\controller\ExercicioController::exibirResultado");
 
    //Adicionar as rotas válidas a cima
 
