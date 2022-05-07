@@ -1,7 +1,7 @@
 <?php
 
 
-namespace EletivaILinguagemdeProgamacaoIv\Projeto;
+namespace Aluno\ProjetoLoja;
 
 
 class Router

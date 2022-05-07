@@ -1,6 +1,6 @@
 <?php
 
-use EletivaILinguagemdeProgamacaoIv\Projeto\Router;
+use Aluno\ProjetoLoja\Router;
 
 require_once __DIR__."/vendor/autoload.php";
 
@@ -11,7 +11,7 @@ require_once __DIR__."/vendor/autoload.php";
 
    //Instanciar classe Router
 
-   $router = new EletivaILinguagemdeProgamacaoIv\Projeto\Router($method, $path);
+   $router = new Aluno\ProjetoLoja\Router($method, $path);
 
    //Adicionar as rotas válidas a baixo
 

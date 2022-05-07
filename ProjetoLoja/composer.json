@@ -1,0 +1,16 @@
+{
+    "name": "aluno/projeto-loja",
+    "description": "Projeto PHP",
+    "autoload": {
+        "psr-4": {
+            "Aluno\\ProjetoLoja\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gabriel Mendes",
+            "email": "lgabrielucas765@gmail.com"
+        }
+    ],
+    "require": {}
+}
