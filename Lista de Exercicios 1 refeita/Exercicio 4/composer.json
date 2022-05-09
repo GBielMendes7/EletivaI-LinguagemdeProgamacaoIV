@@ -1,0 +1,16 @@
+{
+    "name": "exercicio4/php",
+    "description": "exercicio 4",
+    "autoload": {
+        "psr-4": {
+            "Exercicio4\\Php\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Gabriel Mendes",
+            "email": "lgabrielucas765@gmail.com"
+        }
+    ],
+    "require": {}
+}
