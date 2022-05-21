@@ -21,6 +21,10 @@ require_once __DIR__."/vendor/autoload.php";
 
    $router->post("/exemplo-resultado","Aluno\ProjetoLoja\controller\ExercicioController::exibirResultado");
 
+   $router->get("/cliente/nome","Aluno\ProjetoLoja\controller\ClienteController::abrirFormularioInserir");
+
+   $router->post("cliente/inserir","Aluno\ProjetoLoja\controller\ClienteController::inserirCliente");
+
    //Adicionar as rotas válidas a cima
 
    $result = $router->handler();
