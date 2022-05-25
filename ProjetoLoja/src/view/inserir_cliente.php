@@ -12,34 +12,39 @@
     <title>Hello, world!</title>
 </head>
 
-<body class="container mt-5 p-4 rounded-3 bg-white shadow w-50">
-    <h1>Exemplo</h1>
+<body>
+    <?php require_once("barra_navegacao.php");?>
 
-    <form method="POST" action="/cliente/inserir">
+    <h1 class="container p-4">Exemplo</h1>
+    <div class="container mt-2 p-4 rounded-3 bg-white shadow">
+        <form method="post" action="/cliente/inserir">
 
-        <div class="row">
-            <div class="col-5">
-                <label class="label-control">Informe o nome:</label>
-                <input class="form-control" name="nome" type="text">
+            <div class="row">
+                <div class="col-5">
+                    <label class="label-control">Informe o nome:</label>
+                    <input class="form-control" name="nome" type="text">
+                </div>
+
+                <div class="col-5">
+                    <label class="label-control">Informe o email:</label>
+                    <input class="form-control" name="email" type="text">
+                </div>
+                <div class="col-2">
+                    <label class="label-control">Idade:</label>
+                    <input class="form-control" name="idade" type="text">
+                </div>
             </div>
 
-            <div class="col-5">
-                <label class="label-control">Informe o email:</label>
-                <input class="form-control" name="email" type="text">
+            <div class="row mt-3">
+                <div class="col">
+                    <button type="submit" class="btn btn-primary">OK</button>
+                </div>
             </div>
-            <div class="col-2">
-                <label class="label-control">Informe o idade:</label>
-                <input class="form-control" name="idade" type="text">
-            </div>
-        </div>
 
-        <div class="row mt-3">
-            <div class="col">
-                <button type="submit" class="btn btn-primary">OK</button>
-            </div>
-        </div>
+        </form>
 
-    </form>
+    </div>
+    
 
 
 

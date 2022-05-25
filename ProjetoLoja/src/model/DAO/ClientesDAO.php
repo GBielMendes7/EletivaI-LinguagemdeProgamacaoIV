@@ -4,7 +4,7 @@ namespace Aluno\ProjetoLoja\model\DAO;
 
 use Aluno\ProjetoLoja\model\Entity\Clientes;
 
-class ClienteDAO{
+class ClientesDAO{
 
     public function inserir(Clientes $c){
         try{
