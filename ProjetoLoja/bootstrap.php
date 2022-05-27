@@ -17,15 +17,17 @@ require_once __DIR__."/vendor/autoload.php";
        return "Olá Mundo!";
    });
 
-   $router->get("/exemplo", "Aluno\ProjetoLoja\controller\ExercicioController::exibir");
+   $router->get("/cliente/novo", "Aluno\ProjetoLoja\controller\ProdutoController::abrirFormularioInserir");
 
-   $router->post("/exemplo-resultado","Aluno\ProjetoLoja\controller\ExercicioController::exibirResultado");
+   $router->post("/cliente/inserir","Aluno\ProjetoLoja\controller\ProdutoController::inserirProduto");
 
    $router->get("/cliente/novo","Aluno\ProjetoLoja\controller\ClienteController::abrirFormularioInserir");
 
    $router->post("/cliente/inserir","Aluno\ProjetoLoja\controller\ClienteController::inserirCliente");
 
    $router->get("/Clientes","Aluno\ProjetoLoja\controller\ClienteController::abrirListarClientes");
+
+   $router->get("/Produtos","Aluno\ProjetoLoja\controller\ProdutoController::abrirListarProdutos");
 
    //Adicionar as rotas válidas a cima
 
