@@ -14,8 +14,8 @@
 
 <body>
     <?php require_once "barra_navegacao.php";?>
-    <div class="container mt-5 p-4 rounded-3 bg-white shadow">
-        <h1>Clientes</h1>
+    <h1 class="container p-4">Clientes</h1>
+    <div class="container mt-2 p-4 rounded-3 bg-white shadow">
 
         <?php 
             if(isset($resposta)){
@@ -48,8 +48,8 @@
                     <th scope="row"><?=$linha["id"]?></th>
                     <td><?=$linha["nome"]?></td>
                     <td><?=$linha["email"]?></td>
-                    <td><a href="/cliente/alterar/" class="btn btn-warning">Alterar</a>
-                    <a href="/cliente/excluir/<?= $linha["id"]?>" class="btn btn-danger">Excluir</a></td>
+                    <td><a href="/cliente/alterar/" class="btn btn-dark">Alterar</a>
+                    <a href="/cliente/excluir/<?= $linha["id"]?>" class="btn btn-outline-danger">Excluir</a></td>
                 </tr>
                 <?php }?>
             </tbody>

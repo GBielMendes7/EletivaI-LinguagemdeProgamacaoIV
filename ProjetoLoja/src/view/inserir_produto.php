@@ -19,25 +19,25 @@
     <div class="container mt-2 p-4 rounded-3 bg-white shadow">
         <form method="post" action="/produto/inserir">
 
-            <div class="row">
-                <div class="col-5">
+            <div class="row g-3">
+                <div class="col-md-6">
                     <label class="label-control">Informe o nome:</label>
                     <input class="form-control" name="nome" id="nome" type="text">
                 </div>
 
-                <div class="col-2">
+                <div class="col-md-6">
                     <label class="label-control">Valor:</label>
                     <input class="form-control" name="valor" id="valor" type="number">
                 </div>
-                <div class="col-5">
-                    <label class="label-control">descrição:</label>
+                <div class="col-12">
+                    <label class="label-control">Descrição:</label>
                     <input class="form-control" name="des" id="des" type="text">
                 </div>
             </div>
 
             <div class="row mt-3">
                 <div class="col">
-                    <button type="submit" class="btn btn-primary">OK</button>
+                    <button type="submit" class="btn btn-dark">Enviar</button>
                 </div>
             </div>
 
