@@ -11,7 +11,15 @@ class ClienteController
         require_once("../src/view/inserir_cliente.php");
     }
 
+    public static function abrirFormularioAlterar($params){
+        $dao = new ClientesDAO();
+        $resultado = $dao->consultarPorId($params["id"]);
+        require_once("../src/view/alterar_cliente.php");
+    }
+
     public static function abrirListarClientes(){
+        $dao = new ClientesDAO();
+        $resultado = $dao->consultar();
         require_once("../src/view/listar_clientes.php");
     }
 
@@ -27,7 +35,7 @@ class ClienteController
         }else{
             $resposta = false;
         }
-
+        ClienteController::abrirListarClientes();
         
     }
 }

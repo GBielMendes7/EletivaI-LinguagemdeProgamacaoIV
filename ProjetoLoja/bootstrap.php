@@ -17,9 +17,11 @@ require_once __DIR__."/vendor/autoload.php";
        return "Olá Mundo!";
    });
 
-   $router->get("/cliente/novo", "Aluno\ProjetoLoja\controller\ProdutoController::abrirFormularioInserir");
+   $router->get("/produto/novo", "Aluno\ProjetoLoja\controller\ProdutoController::abrirFormularioInserir");
 
-   $router->post("/cliente/inserir","Aluno\ProjetoLoja\controller\ProdutoController::inserirProduto");
+   $router->post("/produto/inserir","Aluno\ProjetoLoja\controller\ProdutoController::inserirProduto");
+
+   $router->get("/Produtos","Aluno\ProjetoLoja\controller\ProdutoController::abrirListarProdutos");
 
    $router->get("/cliente/novo","Aluno\ProjetoLoja\controller\ClienteController::abrirFormularioInserir");
 
@@ -27,7 +29,7 @@ require_once __DIR__."/vendor/autoload.php";
 
    $router->get("/Clientes","Aluno\ProjetoLoja\controller\ClienteController::abrirListarClientes");
 
-   $router->get("/Produtos","Aluno\ProjetoLoja\controller\ProdutoController::abrirListarProdutos");
+   $router->get("/cliente/alterar/{id}","Aluno\ProjetoLoja\controller\ClienteController::abrirFormularioAlterar");
 
    //Adicionar as rotas válidas a cima
 
