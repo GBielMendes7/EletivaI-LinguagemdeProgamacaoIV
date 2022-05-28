@@ -17,7 +17,7 @@
 
     <h1 class="container p-4">Alterar Cliente</h1>
     <div class="container mt-2 p-4 rounded-3 bg-white shadow">
-        <form method="post" action="/cliente/editar/{<?= $id ?>}">
+        <form method="post" action="/cliente/editar/<?= $params[1] ?>">
 
             <div class="row">
                 <div class="col-5">
