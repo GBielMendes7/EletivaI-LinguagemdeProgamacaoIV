@@ -22,16 +22,16 @@
             <div class="row">
                 <div class="col-5">
                     <label class="label-control">Informe o nome:</label>
-                    <input class="form-control" name="nome" type="text">
+                    <input class="form-control" name="nome" id="nome" type="text">
                 </div>
 
-                <div class="col-5">
-                    <label class="label-control">Valor:</label>
-                    <input class="form-control" name="valor" type="number">
-                </div>
                 <div class="col-2">
+                    <label class="label-control">Valor:</label>
+                    <input class="form-control" name="valor" id="valor" type="number">
+                </div>
+                <div class="col-5">
                     <label class="label-control">descrição:</label>
-                    <input class="form-control" name="des" type="text">
+                    <input class="form-control" name="des" id="des" type="text">
                 </div>
             </div>
 

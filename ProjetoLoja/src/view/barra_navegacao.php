@@ -7,8 +7,9 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="\Clientes">Clientes</a>
-          <a class="nav-link active" aria-current="page" href="\Produtos">Produtos</a>
+          <a class="nav-link active" aria-current="page" href="\Clientes">Listar Clientes</a>
+          <a class="nav-link active" aria-current="page" href="/produto/novo">Inserir Produtos</a>
+          <a class="nav-link active" aria-current="page" href="\Produtos">Listar Produtos</a>
         </li>
       </ul>
     </div>

@@ -2,7 +2,6 @@
 
 namespace Aluno\ProjetoLoja\model\DAO;
 
-use Aluno\ProjetoLoja\model\Entity\Clientes;
 use Aluno\ProjetoLoja\model\Entity\Produto;
 
 class ProdutoDAO{

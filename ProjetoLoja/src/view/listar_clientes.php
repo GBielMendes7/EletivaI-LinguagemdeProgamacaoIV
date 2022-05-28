@@ -49,7 +49,7 @@
                     <td><?=$linha["nome"]?></td>
                     <td><?=$linha["email"]?></td>
                     <td><a href="/cliente/alterar/" class="btn btn-warning">Alterar</a>
-                    <a class="btn btn-danger">Excluir</a></td>
+                    <a href="/cliente/excluir/<?= $linha["id"]?>" class="btn btn-danger">Excluir</a></td>
                 </tr>
                 <?php }?>
             </tbody>

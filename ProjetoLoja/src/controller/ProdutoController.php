@@ -5,13 +5,21 @@ namespace Aluno\ProjetoLoja\controller;
 use Aluno\ProjetoLoja\model\DAO\ProdutoDAO;
 use Aluno\ProjetoLoja\model\Entity\Produto;
 
-class ClienteController
+class ProdutoController
 {
     public static function abrirFormularioInserir(){
         require_once("../src/view/inserir_produto.php");
     }
 
+    public static function abrirFormularioAlterar($params){
+        $dao = new ProdutoDAO();
+        $resultado = $dao->consultarPorId($params[1]);
+        require_once("../src/view/alterar_produtos.php");
+    }
+
     public static function abrirListarProdutos(){
+        $dao = new ProdutoDAO();
+        $resultado = $dao->consultar();
         require_once("../src/view/listar_produtos.php");
     }
 
@@ -27,8 +35,33 @@ class ClienteController
         }else{
             $resposta = false;
         }
-
+        ProdutoController::abrirListarProdutos();
         
     }
+    public static function editarCliente($params){
+        $produto = new Produto();
+        $produto->setDescricao($des = $_POST["des"]);
+        $produto->setNome($nome = $_POST["nome"]);
+        $produto->setValor($valor = $_POST["valor"]);
+        $produto->setId($params[1]);
+        $dao = new ProdutoDAO();
+        if ($dao->alterar($produto)){
+            $resposta = true;
+        } else {
+            $resposta = false;
+        }
+        ProdutoController::abrirListarProdutos();
+    }
+
+    public static function excluirProduto($params){
+        $dao = new ProdutoDAO();
+        if ($dao->excluir($params[1])){
+            $resposta = true;
+        } else {
+            $resposta = false;
+        }
+        ProdutoController::abrirListarProdutos();
+    }
+    
 }
 ?>

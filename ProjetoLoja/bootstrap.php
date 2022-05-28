@@ -23,6 +23,13 @@ require_once __DIR__."/vendor/autoload.php";
 
    $router->get("/Produtos","Aluno\ProjetoLoja\controller\ProdutoController::abrirListarProdutos");
 
+   $router->get("/produto/alterar/{id}","Aluno\ProjetoLoja\controller\ClienteController::abrirFormularioAlterar");
+
+   $router->post('/produto/editar/{id}','Aluno\ProjetoPhp\Controller\ClientesController::editarProduto');
+
+   $router->get('/produto/excluir/{id}','Aluno\ProjetoPhp\Controller\ClientesController::excluirProduto');
+   
+
    $router->get("/cliente/novo","Aluno\ProjetoLoja\controller\ClienteController::abrirFormularioInserir");
 
    $router->post("/cliente/inserir","Aluno\ProjetoLoja\controller\ClienteController::inserirCliente");
@@ -30,6 +37,10 @@ require_once __DIR__."/vendor/autoload.php";
    $router->get("/Clientes","Aluno\ProjetoLoja\controller\ClienteController::abrirListarClientes");
 
    $router->get("/cliente/alterar/{id}","Aluno\ProjetoLoja\controller\ClienteController::abrirFormularioAlterar");
+
+   $router->post('/cliente/editar/{id}','Aluno\ProjetoPhp\Controller\ClientesController::editarCliente');
+
+   $router->get('/cliente/excluir/{id}','Aluno\ProjetoPhp\Controller\ClientesController::excluirCliente');
 
    //Adicionar as rotas válidas a cima
 
