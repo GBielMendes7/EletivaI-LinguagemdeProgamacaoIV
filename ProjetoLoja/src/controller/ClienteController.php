@@ -5,39 +5,40 @@ namespace Aluno\ProjetoLoja\controller;
 use Aluno\ProjetoLoja\model\DAO\ClientesDAO;
 use Aluno\ProjetoLoja\model\Entity\Clientes;
 
-class ClienteController
-{
+class ClienteController{
+
+    //private ClientesDAO $dao;
+
     public static function abrirFormularioInserir(){
-        require_once("../src/view/inserir_cliente.php");
+        require_once "../src/View/inserir_cliente.php";
     }
 
     public static function abrirFormularioAlterar($params){
         $dao = new ClientesDAO();
-        $resultado = $dao->consultarPorId($params[1]);
-        require_once("../src/view/alterar_cliente.php");
+        $resultado = $dao->consultarPorId($params['1']);
+        require_once "../src/View/alterar_cliente.php";
     }
 
-    public static function abrirListarClientes(){
+    public static function abrirListaClientes(){
         $dao = new ClientesDAO();
         $resultado = $dao->consultar();
-        require_once("../src/view/listar_clientes.php");
+        require_once "../src/View/listar_clientes.php";
     }
 
     public static function inserirCliente(){
         $cliente = new Clientes();
-        $cliente->setEmail($email = $_POST["email"]);
-        $cliente->setNome($nome = $_POST["nome"]);
-        $cliente->setIdade($idade = $_POST["idade"]);
+        $cliente->setEmail($_POST['email']);
+        $cliente->setIdade($_POST['idade']);
+        $cliente->setNome($_POST['nome']);
         $dao = new ClientesDAO();
         if ($dao->inserir($cliente)){
             $resposta = true;
-            require_once "../src/view/listar_clientes.php";
-        }else{
+        } else {
             $resposta = false;
         }
-        ClienteController::abrirListarClientes();
-        
+        ClienteController::abrirListaClientes();
     }
+
     public static function editarCliente($params){
         $cliente = new Clientes();
         $cliente->setEmail($_POST['email']);
@@ -50,7 +51,7 @@ class ClienteController
         } else {
             $resposta = false;
         }
-        ClienteController::abrirListarClientes();
+        ClienteController::abrirListaClientes();
     }
 
     public static function excluirCliente($params){
@@ -60,7 +61,9 @@ class ClienteController
         } else {
             $resposta = false;
         }
-        ClienteController::abrirListarClientes();
+        ClienteController::abrirListaClientes();
     }
+
 }
+
 ?>

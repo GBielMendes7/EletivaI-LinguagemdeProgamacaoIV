@@ -13,7 +13,7 @@ class ProdutoController
 
     public static function abrirFormularioAlterar($params){
         $dao = new ProdutoDAO();
-        $resultado = $dao->consultarPorId($params[1]);
+        $resultado = $dao->consultarPorId($params['1']);
         require_once("../src/view/alterar_produtos.php");
     }
 
@@ -25,9 +25,9 @@ class ProdutoController
 
     public static function inserirProduto(){
         $produto = new Produto();
-        $produto->setDescricao($des = $_POST["des"]);
-        $produto->setNome($nome = $_POST["nome"]);
-        $produto->setValor($valor = $_POST["valor"]);
+        $produto->setNome($_POST['nome']);
+        $produto->setDescricao($_POST['des']);
+        $produto->setValor($_POST['valor']);
         $dao = new ProdutoDAO();
         if ($dao->inserir($produto)){
             $resposta = true;
@@ -40,9 +40,9 @@ class ProdutoController
     }
     public static function editarCliente($params){
         $produto = new Produto();
-        $produto->setDescricao($des = $_POST["des"]);
-        $produto->setNome($nome = $_POST["nome"]);
-        $produto->setValor($valor = $_POST["valor"]);
+        $produto->setNome($_POST['nome']);
+        $produto->setDescricao($_POST['des']);
+        $produto->setValor($_POST['valor']);
         $produto->setId($params[1]);
         $dao = new ProdutoDAO();
         if ($dao->alterar($produto)){

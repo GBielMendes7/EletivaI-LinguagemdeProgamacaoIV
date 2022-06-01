@@ -45,11 +45,11 @@
             <tbody>
                 <?php while($linha = $resultado->fetch(PDO::FETCH_ASSOC)){ ?>
                 <tr>
-                    <th scope="row"><?=$linha["id"]?></th>
-                    <td><?=$linha["nome"]?></td>
-                    <td><?=$linha["email"]?></td>
-                    <td><a href="/cliente/alterar/" class="btn btn-dark">Alterar</a>
-                    <a href="/cliente/excluir/<?= $linha["id"]?>" class="btn btn-outline-danger">Excluir</a></td>
+                    <th scope="row"><?=$linha['id']?></th>
+                    <td><?=$linha['nome']?></td>
+                    <td><?=$linha['email']?></td>
+                    <td><a href="/cliente/alterar/<?= $linha['id']?>" class="btn btn-dark">Alterar</a>
+                    <a href="/cliente/excluir/<?= $linha['id']?>" class="btn btn-outline-danger">Excluir</a></td>
                 </tr>
                 <?php }?>
             </tbody>

@@ -10,27 +10,25 @@ class ClientesDAO{
         try{
             $sql = "INSERT INTO `clientes`(`nome`, `email`, `idade`) VALUES (:nome, :email, :idade)";
             $p = Conexao::conectar()->prepare($sql);
-            $p->bindValue(":nome",$c->getNome());
-            $p->bindValue(":email",$c->getEmail());
-            $p->bindValue(":idade",$c->getIdade());
+            $p->bindValue(":nome", $c->getNome());
+            $p->bindValue(":email", $c->getEmail());
+            $p->bindValue(":idade", $c->getIdade());
             return $p->execute();
-
-        }catch(\Exception $e){
+        } catch(\Exception $e){
             return false;
         }
     }
 
     public function alterar(Clientes $c){
         try{
-            $sql = "UPDATE `clientes` SET `nome`= :nome,`email`= :email,`idade`= :idade WHERE id = :id";
+            $sql = "UPDATE `clientes` SET `nome`=:nome,`email`=:email,`idade`=:idade WHERE id = :id";
             $p = Conexao::conectar()->prepare($sql);
-            $p->bindValue(":nome",$c->getNome());
-            $p->bindValue(":email",$c->getEmail());
-            $p->bindValue(":idade",$c->getIdade());
-            $p->bindValue(":id",$c->getId());
+            $p->bindValue(":nome", $c->getNome());
+            $p->bindValue(":email", $c->getEmail());
+            $p->bindValue(":idade", $c->getIdade());
+            $p->bindValue(":id", $c->getId());
             return $p->execute();
-
-        }catch(\Exception $e){
+        } catch(\Exception $e){
             return false;
         }
     }
@@ -39,10 +37,9 @@ class ClientesDAO{
         try{
             $sql = "DELETE FROM `clientes` WHERE id = :id";
             $p = Conexao::conectar()->prepare($sql);
-            $p->bindValue(":id",$id->getId());
-            return $id->execute();
-
-        }catch(\Exception $e){
+            $p->bindValue(":id", $id);
+            return $p->execute();
+        } catch(\Exception $e){
             return false;
         }
     }
@@ -51,8 +48,7 @@ class ClientesDAO{
         try{
             $sql = "SELECT * FROM clientes";
             return Conexao::conectar()->query($sql);
-
-        }catch(\Exception $e){
+        } catch(\Exception $e){
             return false;
         }
     }
@@ -61,14 +57,13 @@ class ClientesDAO{
         try{
             $sql = "SELECT * FROM clientes WHERE id = :id";
             $p = Conexao::conectar()->prepare($sql);
-            $p->bindValue(":id",$id);
+            $p->bindValue(":id", $id);
+            $p->execute();
             return $p->fetch();
-
-        }catch(\Exception $e){
+        } catch(\Exception $e){
             return false;
         }
     }
-}
-
+}    
 
 ?>
