@@ -8,7 +8,7 @@ class ProdutoDAO{
 
     public function inserir(Produto $pr){
         try{
-            $sql = "INSERT INTO `produto`(`nome`, `descricao`, `valor`) VALUES (:nome, :descricao, :valor)";
+            $sql = "INSERT INTO `produtos`(`nome`, `descricao`, `valor`) VALUES (:nome, :descricao, :valor)";
             $p = Conexao::conectar()->prepare($sql);
             $p->bindValue(":nome", $pr->getNome());
             $p->bindValue(":descricao", $pr->getDescricao());
@@ -21,7 +21,7 @@ class ProdutoDAO{
 
     public function alterar(Produto $pr){
         try{
-            $sql = "UPDATE `produto` SET `nome`= :nome,`descricao`= :descricao,`valor`= :valor WHERE id = :id";
+            $sql = "UPDATE `produtos` SET `nome`= :nome,`descricao`= :descricao,`valor`= :valor WHERE id = :id";
             $p = Conexao::conectar()->prepare($sql);
             $p->bindValue(":nome", $pr->getNome());
             $p->bindValue(":descricao", $pr->getDescricao());
@@ -35,7 +35,7 @@ class ProdutoDAO{
 
     public function excluir($id){
         try{
-            $sql = "DELETE FROM `produto` WHERE id = :id";
+            $sql = "DELETE FROM `produtos` WHERE id = :id";
             $p = Conexao::conectar()->prepare($sql);
             $p->bindValue(":id", $id);
 
@@ -46,7 +46,7 @@ class ProdutoDAO{
 
     public function consultar(){
         try{
-            $sql = "SELECT * FROM produto";
+            $sql = "SELECT * FROM produtos";
             return Conexao::conectar()->query($sql);
 
         }catch(\Exception $e){
@@ -56,7 +56,7 @@ class ProdutoDAO{
 
     public function consultarPorId($id){
         try{
-            $sql = "SELECT * FROM produto WHERE id = :id";
+            $sql = "SELECT * FROM produtos WHERE id = :id";
             $p = Conexao::conectar()->prepare($sql);
             $p->bindValue(":id", $id);
             $p->execute();

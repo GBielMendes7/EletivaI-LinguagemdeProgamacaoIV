@@ -23,18 +23,18 @@ require_once __DIR__."/vendor/autoload.php";
 
    $router->get("/Produtos","Aluno\ProjetoLoja\controller\ProdutoController::abrirListarProdutos");
 
-   $router->get("/produto/alterar/{id}","Aluno\ProjetoLoja\controller\ClienteController::abrirFormularioAlterar");
+   $router->get("/produto/alterar/{id}","Aluno\ProjetoLoja\controller\ProdutoController::abrirFormularioAlterar");
 
-   $router->post('/produto/editar/{id}','Aluno\ProjetoPhp\controller\ClienteController::editarProduto');
+   $router->post('/produto/editar/{id}','Aluno\ProjetoPhp\controller\ProdutoController::editarProduto');
 
-   $router->get('/produto/excluir/{id}','Aluno\ProjetoPhp\controller\ClienteController::excluirProduto');
+   $router->get('/produto/excluir/{id}','Aluno\ProjetoPhp\controller\ProdutoController::excluirProduto');
    
 
    $router->get("/cliente/novo","Aluno\ProjetoLoja\controller\ClienteController::abrirFormularioInserir");
 
    $router->post("/cliente/inserir","Aluno\ProjetoLoja\controller\ClienteController::inserirCliente");
 
-   $router->get("/Clientes","Aluno\ProjetoLoja\controller\ClienteController::abrirListarClientes");
+   $router->get("/Clientes","Aluno\ProjetoLoja\controller\ClienteController::abrirListaClientes");
 
    $router->get("/cliente/alterar/{id}","Aluno\ProjetoLoja\controller\ClienteController::abrirFormularioAlterar");
 
