@@ -26,6 +26,7 @@ class ProdutoDAO{
             $p->bindValue(":nome", $pr->getNome());
             $p->bindValue(":descricao", $pr->getDescricao());
             $p->bindValue(":valor", $pr->getValor());
+            $p->bindValue(":id", $pr->getId());
             return $p->execute();
 
         }catch(\Exception $e){
@@ -38,7 +39,7 @@ class ProdutoDAO{
             $sql = "DELETE FROM `produtos` WHERE id = :id";
             $p = Conexao::conectar()->prepare($sql);
             $p->bindValue(":id", $id);
-
+            return $p->execute();
         }catch(\Exception $e){
             return false;
         }

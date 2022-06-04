@@ -39,6 +39,7 @@
                     <th scope="col">#</th>
                     <th scope="col">Nome</th>
                     <th scope="col">Email</th>
+                    <th scope="col">Idade</th>
                     <th scope="col">Ações</th>
                 </tr>
             </thead>
@@ -48,6 +49,7 @@
                     <th scope="row"><?=$linha['id']?></th>
                     <td><?=$linha['nome']?></td>
                     <td><?=$linha['email']?></td>
+                    <td><?=$linha['idade']?></td>
                     <td><a href="/cliente/alterar/<?= $linha['id']?>" class="btn btn-dark">Alterar</a>
                     <a href="/cliente/excluir/<?= $linha['id']?>" class="btn btn-outline-danger">Excluir</a></td>
                 </tr>

@@ -14,7 +14,7 @@ class ProdutoController
     public static function abrirFormularioAlterar($params){
         $dao = new ProdutoDAO();
         $resultado = $dao->consultarPorId($params['1']);
-        require_once("../src/view/alterar_produtos.php");
+        require_once("../src/view/alterar_produto.php");
     }
 
     public static function abrirListarProdutos(){
@@ -38,7 +38,7 @@ class ProdutoController
         ProdutoController::abrirListarProdutos();
         
     }
-    public static function editarCliente($params){
+    public static function editarProduto($params){
         $produto = new Produto();
         $produto->setNome($_POST['nome']);
         $produto->setDescricao($_POST['des']);

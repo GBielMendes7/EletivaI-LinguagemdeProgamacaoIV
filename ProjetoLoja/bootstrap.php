@@ -17,6 +17,9 @@ require_once __DIR__."/vendor/autoload.php";
        return "Olá Mundo!";
    });
 
+   $router->get("/Home", "Aluno\ProjetoLoja\controller\HomeController::abrirHome");
+
+   
    $router->get("/produto/novo", "Aluno\ProjetoLoja\controller\ProdutoController::abrirFormularioInserir");
 
    $router->post("/produto/inserir","Aluno\ProjetoLoja\controller\ProdutoController::inserirProduto");
@@ -25,9 +28,9 @@ require_once __DIR__."/vendor/autoload.php";
 
    $router->get("/produto/alterar/{id}","Aluno\ProjetoLoja\controller\ProdutoController::abrirFormularioAlterar");
 
-   $router->post('/produto/editar/{id}','Aluno\ProjetoPhp\controller\ProdutoController::editarProduto');
+   $router->post('/produto/editar/{id}','Aluno\ProjetoLoja\controller\ProdutoController::editarProduto');
 
-   $router->get('/produto/excluir/{id}','Aluno\ProjetoPhp\controller\ProdutoController::excluirProduto');
+   $router->get('/produto/excluir/{id}','Aluno\ProjetoLoja\controller\ProdutoController::excluirProduto');
    
 
    $router->get("/cliente/novo","Aluno\ProjetoLoja\controller\ClienteController::abrirFormularioInserir");
@@ -38,9 +41,9 @@ require_once __DIR__."/vendor/autoload.php";
 
    $router->get("/cliente/alterar/{id}","Aluno\ProjetoLoja\controller\ClienteController::abrirFormularioAlterar");
 
-   $router->post('/cliente/editar/{id}','Aluno\ProjetoPhp\controller\ClienteController::editarCliente');
+   $router->post('/cliente/editar/{id}','Aluno\ProjetoLoja\controller\ClienteController::editarCliente');
 
-   $router->get('/cliente/excluir/{id}','Aluno\ProjetoPhp\controller\ClienteController::excluirCliente');
+   $router->get('/cliente/excluir/{id}','Aluno\ProjetoLoja\controller\ClienteController::excluirCliente');
 
    //Adicionar as rotas válidas a cima
 
