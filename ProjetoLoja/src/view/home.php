@@ -13,12 +13,22 @@
 </head>
 
 <body>
-    <div class="container-fluid">
-        <a class="navbar-brand fs-3 fw-bold" href="#">Sistema PHP</a>
+    <div class="container-fluid p-3">
+        <a class="navbar-brand fs-3 text-dark fw-bold" href="#">Sistema PHP</a>
     </div>    
 
-    <h1 class="container p-4">Bem Vindo</h1>
-    <div class="container">
+    <h1 class="p-4 text-center">Bem Vindo</h1>
+
+    <div class="container text-center p-4">
+        <div class="d-grid gap-2 col-6 mx-auto p-4">
+            <button onclick="window.location.href='/cliente/novo'" type="button" class="btn btn-dark fs-3 p-2">Inserir Cliente</button>
+
+        </div>
+
+        <div class="d-grid gap-2 col-6 mx-auto p-4">
+            <button onclick="window.location.href='/produto/novo'" type="button" class="btn btn-dark fs-3 p-2">Inserir Produto</button>
+        </div>
+        
         
 
     </div>
